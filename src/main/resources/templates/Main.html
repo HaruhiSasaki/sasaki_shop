@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- CSSファイルの読み込み -->
+<link href="/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"></link>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- 	<span th:text="${message}"></span> -->
+	<div class=ItemList>
+		<div class=shohinList>【商品管理】商品情報一覧</div>
+
+
+		<div id="list">
+			<p>
+				処理モード
+				<input type="radio" name="btn" class="a" id="a" value="good"
+					checked="checked" onclick="checkradioA();">検索/修正
+				<input type="radio" name="btn" class="b" id="b" value="bad"
+				    onclick="checkradioB();">新規登録
+			</p>
+
+
+
+			<!-- --------------------------------------------------------------------- -->
+			<div id="kensaku">
+				<p class=blue>検索条件</p>
+				<form action="#" method="post">
+					<table>
+						<tr>
+							<th>商品コード</th>
+							<td><label><input type="search" name="search"  maxlength='6'></label>
+								<label><input type="submit" name="submit" value="検索"></label>
+							</td>
+						</tr>
+
+						<tr>
+							<th>商品名</th>
+							<td><input type="search" name="search"  maxlength='50' class="box"></td>
+						</tr>
+
+						<tr>
+							<th>製造メーカー</th>
+							<td><select name="blood" class="box">
+									<option value=""></option>
+									<option value="A">テストA</option>
+									<option value="B">テストB</option>
+									<option value="C">テストC</option>
+									<option value="D">テストD</option>
+							</select>
+							<td>
+						</tr>
+					</table>
+				</form>
+			</div>
+
+			<!--ーーーーーーーーーーーーーーーー 新規登録部分 ーーーーーーーーーーーーーーーーーーーーーーーーー-->
+			<div id="shinki">
+
+				<form action="#" method="post">
+					<p class=blue>新規登録</p>
+					<table>
+						<tr>
+							<th>商品コード</th>
+							<td><label><input type="search" name="search"></label>
+								<label><input type="submit" name="submit" value="新規登録"></label>
+							</td>
+						</tr>
+
+						<tr>
+							<th>商品名</th>
+							<td><input type="search" name="search" maxlength='50' class="box"></td>
+						</tr>
+
+						<tr>
+							<th>単価</th>
+							<td><input type="search" name="search" ></td>
+						</tr>
+
+						<tr>
+							<th>製造メーカー</th>
+							<td><select name="blood" class="box">
+									<option value="A">テストA</option>
+									<option value="B">テストB</option>
+									<option value="C">テストC</option>
+									<option value="D">テストD</option>
+							</select>
+							<td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<!-------------------------------------------- 検索結果表示部分 ------------------------------------->
+			<div id=kekka>
+				<p class=blue>検索結果</p>
+				<form action="#" method="post">
+					<input type="submit" name="submit" value="更新">
+					<input type="submit" name="submit" value="削除">
+					<input type="submit" name="submit" value="中断">
+				</form>
+				<p>検索結果リスト</p>
+			</div>
+		</div>
+
+	</div>
+
+<!-- jsの読み込み -->
+<script type="text/javascript" src="js/main.js" th:src="@{/js/main.js}"></script>
+</body>
+</html>
+
