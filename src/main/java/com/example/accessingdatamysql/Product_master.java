@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.accessingdatamysql;
 
 
 import javax.persistence.Entity;
@@ -31,7 +31,7 @@ public class Product_master {
     return product;
   }
 
-  public void setId(String product) {
+  public void setProduct(String product) {
     this.product = product;
   }
 
@@ -71,7 +71,7 @@ public String getKosinsya() {
 	return kosinsya;
 }
 
-public void setKosinsya(String kosinsya) {
+public void setKosinsya(String kosinsya){
 	this.kosinsya = kosinsya;
 }
 
@@ -87,8 +87,8 @@ public Integer getVershion() {
 	return vershion;
 }
 
-public void setVershion(Integer vershion) {
-	this.vershion = vershion;
+public void setVershion(Integer version) {
+	this.vershion = version;
 }
 
 
