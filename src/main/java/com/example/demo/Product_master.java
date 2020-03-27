@@ -1,4 +1,4 @@
-package com.example.accessingdatamysql;
+package com.example.demo;
 
 
 import javax.persistence.Entity;
