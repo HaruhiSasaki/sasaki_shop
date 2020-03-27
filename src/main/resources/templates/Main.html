@@ -31,7 +31,7 @@
 			<!-- --------------------------------------------------------------------- -->
 			<div id="kensaku">
 				<p class=blue>検索条件</p>
-				<form action="#" method="post">
+				<form action="main" method="post">
 					<table>
 						<tr>
 							<th>商品コード</th>
@@ -63,7 +63,7 @@
 			<!--ーーーーーーーーーーーーーーーー 新規登録部分 ーーーーーーーーーーーーーーーーーーーーーーーーー-->
 			<div id="shinki">
 
-				<form action="#" method="post">
+				<form action="main" method="post">
 					<p class=blue>新規登録</p>
 					<table>
 						<tr>
@@ -86,6 +86,7 @@
 						<tr>
 							<th>製造メーカー</th>
 							<td><select name="blood" class="box">
+									<option value=""></option>
 									<option value="A">テストA</option>
 									<option value="B">テストB</option>
 									<option value="C">テストC</option>
@@ -97,7 +98,7 @@
 				</form>
 			</div>
 			<!-------------------------------------------- 検索結果表示部分 ------------------------------------->
-			<div id=kekka>
+			<div id="kekka hide">
 				<p class=blue>検索結果</p>
 				<form action="#" method="post">
 					<input type="submit" name="submit" value="更新">

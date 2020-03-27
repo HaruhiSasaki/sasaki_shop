@@ -52,12 +52,14 @@ th {
 
 }
 
-#shinki{
+/* #shinki{
 	  display: none;
+} */
+.hide {
+	display:none;
 }
 
 #kekka{
-	  display: none;
 }
 
 

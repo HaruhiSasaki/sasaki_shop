@@ -13,7 +13,10 @@ public class Main {
 		return "main";
 	}
 
+	@RequestMapping(value = "/main", method = RequestMethod.POST)
+	public String kensaku(Model model) {
+		model.addAttribute("message", "Mainコントローラー");
+		return "main";
+	}
 
-
-//データベースから全ての情報をもってくる
 }
