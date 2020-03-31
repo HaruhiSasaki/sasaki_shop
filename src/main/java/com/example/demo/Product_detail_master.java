@@ -9,18 +9,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity // This tells Hibernate to make a table out of this class
-public class Product_master {
+public class Product_detail_master {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
   private String productcd; //商品コード
 
-  private String syohinname; //商品名
+  private String unitprice; //単価
+
+  private String makercd;	//メーカーコード
 
   private String torokusya; //登録者
 
   private String torokupg; //登録プログラム
 
-  private Timestamp torokudate; //登録日
+  private Timestamp torokudate; //登録日　
 
   private String kosinsya; //更新者
 
@@ -39,14 +41,21 @@ public class Product_master {
     this.productcd = productcd;
   }
 
-public String getShohinname() {
-	return syohinname;
+public String getUnitprice() {
+	return unitprice;
 }
 
-public void setShohinname(String syohinname) {
-	this.syohinname = syohinname;
+public void setUnitprice(String unitprice) {
+	this.unitprice = unitprice;
 }
 
+public String getMakercd() {
+	return makercd;
+}
+
+public void setMakercd(String makercd) {
+	this.makercd = makercd;
+}
 public String getTorokusya() {
 	return torokusya;
 }
@@ -79,16 +88,16 @@ public void setKosinsya(String kosinsya){
 	this.kosinsya = kosinsya;
 }
 
-public Timestamp getKosindate() {
-	return kosindate;
-}
-
 public String getKosinpg() {
 	return kosinpg;
 }
 
 public void setKosinpg(String kosinpg) {
 	this.kosinpg = kosinpg;
+}
+
+public Timestamp getKosindate() {
+	return kosindate;
 }
 
 public void setKosindate(Timestamp kosindate) {
@@ -102,6 +111,8 @@ public Integer getVersion() {
 public void setVershion(Integer version) {
 	this.version = version;
 }
+
+
 
 
 
