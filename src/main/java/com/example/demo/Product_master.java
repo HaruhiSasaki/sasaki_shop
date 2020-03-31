@@ -18,7 +18,7 @@ public class Product_master {
 
   private String torokupg; //登録プログラム
 
-  private Integer torokudate; //登録日　timestanpとはなんだったのか？？？橋本さん確認
+  private Integer torokudate; //登録日　t
 
   private String kosinsya; //更新者
 
