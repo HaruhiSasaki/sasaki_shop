@@ -1,6 +1,8 @@
 package com.example.demo;
 
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,37 +12,37 @@ import javax.persistence.Id;
 public class Product_master {
   @Id
   @GeneratedValue(strategy=GenerationType.AUTO)
-  private String product; //商品コード
+  private String productcd; //商品コード
 
-  private String shohinname; //商品名
+  private String syohinname; //商品名
 
   private String torokusya; //登録者
 
   private String torokupg; //登録プログラム
 
-  private Integer torokudate; //登録日　t
+  private Timestamp torokudate; //登録日　t
 
   private String kosinsya; //更新者
 
-  private Integer kosindate; //更新日
+  private Timestamp kosindate; //更新日
 
-  private Integer vershion; //バージョン
+  private Integer version; //バージョン
 
 
-  public String getProduct() {
-    return product;
+  public String getProductcd() {
+    return productcd;
   }
 
-  public void setProduct(String product) {
-    this.product = product;
+  public void setProductcd(String productcd) {
+    this.productcd = productcd;
   }
 
 public String getShohinname() {
-	return shohinname;
+	return syohinname;
 }
 
-public void setShohinname(String shohinname) {
-	this.shohinname = shohinname;
+public void setShohinname(String syohinname) {
+	this.syohinname = syohinname;
 }
 
 public String getTorokusya() {
@@ -59,11 +61,11 @@ public void setTorokupg(String torokupg) {
 	this.torokupg = torokupg;
 }
 
-public Integer getTorokudate() {
+public Timestamp getTorokudate() {
 	return torokudate;
 }
 
-public void setTorokudate(Integer torokudate) {
+public void setTorokudate(Timestamp torokudate) {
 	this.torokudate = torokudate;
 }
 
@@ -75,20 +77,20 @@ public void setKosinsya(String kosinsya){
 	this.kosinsya = kosinsya;
 }
 
-public Integer getKosindate() {
+public Timestamp getKosindate() {
 	return kosindate;
 }
 
-public void setKosindate(Integer kosindate) {
+public void setKosindate(Timestamp kosindate) {
 	this.kosindate = kosindate;
 }
 
-public Integer getVershion() {
-	return vershion;
+public Integer getVersion() {
+	return version;
 }
 
 public void setVershion(Integer version) {
-	this.vershion = version;
+	this.version = version;
 }
 
 
