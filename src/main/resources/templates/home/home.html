@@ -21,9 +21,8 @@
 			<p>
 				処理モード
 				<input type="radio" name="btn" class="a" id="a" value="good"
-					checked="checked" onclick="checkradioA();">検索/修正
-				<input type="radio" name="btn" class="b" id="b" value="bad"
-				    onclick="checkradioB();">新規登録
+					checked="checked">検索/修正
+				<input type="radio" name="btn" class="b" id="b" value="bad">新規登録
 			</p>
 
 
@@ -31,12 +30,12 @@
 			<!-- --------------------------------------------------------------------- -->
 			<div id="kensaku">
 				<p class=blue>検索条件</p>
-				<form action="main" method="post">
+				<form action="allmaker" method="get">
 					<table>
 						<tr>
 							<th>商品コード</th>
 							<td><label><input type="search" name="search"  maxlength='6'></label>
-								<label><input type="submit" name="submit" value="検索"></label>
+								<label><input type="submit" name="submit" id="MakerSearch" value="検索"></label>
 							</td>
 						</tr>
 
@@ -98,7 +97,7 @@
 				</form>
 			</div>
 			<!-------------------------------------------- 検索結果表示部分 ------------------------------------->
-			<div id="kekka hide">
+			<div id="kekka">
 				<p class=blue>検索結果</p>
 				<form action="#" method="post">
 					<input type="submit" name="submit" value="更新">
